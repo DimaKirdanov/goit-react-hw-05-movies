@@ -1,0 +1,30 @@
+.container{
+  width: 1200px;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.name{
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+.desc{
+ margin: 0;
+  text-align: center;
+  font-weight: 400;
+    font-size: 12px;
+}
+
+.img {
+  width: 100px;
+}
+.item{
+  margin-right: 10px;
+    width: 100px;
+  list-style: none;
+
+}
