@@ -19,29 +19,28 @@ export default function Cast() {
     } catch (error) {}
   }, [movieId]);
 
-  return (
-    <div className={s.container}>
- <ul className={s.list}>
-      {cast.map(({ name, profile_path, character }, index) => {
-        return (
-          <div>
- <li className={s.item} key={index}>
-            {profile_path && (
-              <img
-                className={s.img}
-                src={`https://image.tmdb.org/t/p/w500${profile_path}`}
-                alt={name}
-              />
-            )}
-            <p className={s.name}>{name}</p>
-            <p className={s.desc}>{`Character: ${character}`}</p>
-          </li>
-          </div>
-         
-        );
-      })}
-    </ul>
-    </div>
+  const items = cast.map(({ id, name, character, profile_path }) => (
+  
+  <li className={s.item} key={id}>
+      {profile_path && (
+        <img className={s.img}
+          src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
+          alt=""
+          width="200"
+        ></img>
+      )}
+      <p className={s.name}>{name}</p>
+      <p className={s.desc}>{character}</p>
+    </li>
    
+  
+  ));
+
+  return (
+    <ul className={s.list}>
+      {items.length === 0
+        ? "We don't have any information about actors."
+        : items}
+    </ul>
   );
-}
+};

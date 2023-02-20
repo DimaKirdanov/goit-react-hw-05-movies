@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from 'services/api';
+import s from "./Review.module.css"
 
 export default function Review() {
   const [review, setReview] = useState([]);
@@ -34,7 +35,7 @@ export default function Review() {
           );
         })}
       </ul>
-      {!reviewStatus && <p>We don't have any reviews for this movie.</p>}
+      {!reviewStatus && <p className={s.list}>We don't have any reviews for this movie.</p>}
     </>
   );
 }
