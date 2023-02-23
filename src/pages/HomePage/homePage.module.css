@@ -1,0 +1,19 @@
+.list {
+  margin-left: 0px;
+  padding: 20px;
+}
+
+.item {
+  list-style: none;
+}
+/* .link{
+text-decoration: none;
+} */
+.container {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.img {
+  margin: 5px;
+}
